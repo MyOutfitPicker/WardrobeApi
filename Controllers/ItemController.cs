@@ -2,6 +2,7 @@ namespace MyWardrobeApi.Controllers
 {
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
     using MyWardrobeApi.Data;
     using MyWardrobeApi.Models;
     using MyWardrobeApi.Models.Dtos;
@@ -9,10 +10,13 @@ namespace MyWardrobeApi.Controllers
     /// <summary>
     /// Controller for managing item-related operations.
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/v1/items")]
     [ApiController]
     public class ItemController : ControllerBase
     {
+        /// <summary>
+        /// The Wardrobe database context that acts as a bridge between the application and the database.
+        /// </summary>
         private readonly WardrobeContext _context;
 
         /// <summary>
@@ -55,7 +59,27 @@ namespace MyWardrobeApi.Controllers
             await this._context.Items.AddAsync(item);
             await this._context.SaveChangesAsync();
 
-            return this.CreatedAtAction(nameof(this.GetItemById), item);
+            return this.CreatedAtAction(nameof(this.GetById), item);
+        }
+
+        /// <summary>
+        /// Retrieves all items.
+        /// </summary>
+        /// <returns>The item collection if found and has items; otherwise, a 204 as no content.</returns>
+        /// <response code="200">Returns the requested item list.</response>
+        /// <response code="204">Returns the requested item list with no content.</response>
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Item>>> GetAll()
+        {
+            // TODO: This endpoint should be refactored to GetAllByUserId after authentication has been implemented.
+            var itemsList = await this._context.Items.ToListAsync();
+
+            if (!itemsList.Any())
+            {
+                return this.NoContent();
+            }
+
+            return this.Ok(itemsList);
         }
 
         /// <summary>
@@ -68,14 +92,18 @@ namespace MyWardrobeApi.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Item>> GetItemById(int id)
+        public async Task<ActionResult<Item>> GetById(int id)
         {
             // Retrieve the item from the database
             var item = await this._context.Items.FindAsync(id);
 
+            if (id <= 0)
+            {
+                return this.BadRequest(new { Message = "The item ID must be a positive integer." });
+            }
+
             if (item is null)
             {
-                // Return 404 if the item is not found
                 return this.NotFound(new { Message = $"Item with ID {id} not found." });
             }
 
