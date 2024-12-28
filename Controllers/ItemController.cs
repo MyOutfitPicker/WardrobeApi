@@ -1,3 +1,13 @@
+// -----------------------------------------------------------------------
+// <copyright file="ItemController.cs" company="MyWardrobe">
+//     Copyright (c) MyWardrobe. All rights reserved.
+//     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
+// </copyright>
+// -----------------------------------------------------------------------
+// <summary>
+//     Represents the entry point to the clothing item endpoint.
+// </summary>
+// -----------------------------------------------------------------------
 namespace MyWardrobeApi.Controllers
 {
     using System.Threading.Tasks;

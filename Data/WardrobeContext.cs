@@ -1,24 +1,46 @@
+// -----------------------------------------------------------------------
+// <copyright file="WardrobeContext.cs" company="MyWardrobe">
+//     Copyright (c) MyWardrobe. All rights reserved.
+//     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
+// </copyright>
+// -----------------------------------------------------------------------
+// <summary>
+//     Represents the database context for the Wardrobe database.
+// </summary>
+// -----------------------------------------------------------------------
 namespace MyWardrobeApi.Data
 {
     using Microsoft.EntityFrameworkCore;
     using MyWardrobeApi.Models;
 
-    public class WardrobeContext : DbContext
+    /// <summary>
+    /// Represents the database context for the Wardrobe application.
+    /// </summary>
+    /// <remarks>
+    /// Initializes a new instance of the <see cref="WardrobeContext"/> class.
+    /// </remarks>
+    /// <param name="options">The options to configure the database context.</param>
+    public class WardrobeContext(DbContextOptions<WardrobeContext> options) : DbContext(options)
     {
-        public DbSet<Item> Items { get; set; }
+        /// <summary>
+        /// Gets or sets the <see cref="DbSet{TEntity}"/> of items in the wardrobe.
+        /// </summary>
+        public DbSet<Item> Items { get; set; } = default!;
 
-        public DbSet<Outfit> Outfits { get; set; }
+        /// <summary>
+        /// Gets or sets the <see cref="DbSet{TEntity}"/> of outfits in the wardrobe.
+        /// </summary>
+        public DbSet<Outfit> Outfits { get; set; } = default!;
 
-        public WardrobeContext(DbContextOptions<WardrobeContext> options)
-            : base(options)
-        {
-        }
-
+        /// <summary>
+        /// Configures the entity relationships and database schema during model creation.
+        /// </summary>
+        /// <param name="modelBuilder">The builder used to configure the entity framework model.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure the many-to-many relationship
+            // Configure the many-to-many relationship between Outfit and Item
             modelBuilder.Entity<OutfitItem>()
                 .HasKey(oi => new { oi.OutfitId, oi.ItemId });
 
