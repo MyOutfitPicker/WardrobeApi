@@ -5,8 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 // <summary>
-//      This file contains extension methods for configuring services in the application, such as the database context
-//      and controllers.
+//      This file contains extension methods for configuring services in the application, such as the database context and controllers.
 // </summary>
 namespace MyWardrobeApi.Extensions
 {
