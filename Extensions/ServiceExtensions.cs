@@ -45,10 +45,10 @@ namespace MyWardrobeApi.Extensions
         public static IServiceCollection ConfigureControllers(this IServiceCollection services)
         {
             services.AddControllers()
-            .ConfigureApiBehaviorOptions(options =>
-            {
-                options.SuppressModelStateInvalidFilter = true;
-            });
+                .ConfigureApiBehaviorOptions(options =>
+                {
+                    options.SuppressModelStateInvalidFilter = true;
+                });
 
             return services;
         }
