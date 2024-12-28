@@ -69,6 +69,9 @@ namespace MyWardrobeApi.Controllers
         /// <response code="200">Returns the requested item list.</response>
         /// <response code="204">Returns the requested item list with no content.</response>
         [HttpGet]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(IEnumerable<Item>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<Item>), StatusCodes.Status204NoContent)]
         public async Task<ActionResult<IEnumerable<Item>>> GetAll()
         {
             // TODO: This endpoint should be refactored to GetAllByUserId after authentication has been implemented.
@@ -90,7 +93,8 @@ namespace MyWardrobeApi.Controllers
         /// <response code="200">Returns the requested item.</response>
         /// <response code="404">If the item is not found.</response>
         [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Item), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Item>> GetById(int id)
         {
