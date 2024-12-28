@@ -1,17 +1,10 @@
-using Microsoft.EntityFrameworkCore;
-using MyWardrobeApi.Data;
+using MyWardrobeApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-    ?? throw new InvalidOperationException("Connection string not found.");
 
 // Add services to the container.
-builder.Services.AddControllers()
-    .ConfigureApiBehaviorOptions(options => {
-        options.SuppressModelStateInvalidFilter = true;
-    });
-builder.Services.AddDbContext<WardrobeContext>(options =>
-    options.UseSqlite(connectionString));
+builder.Services.ConfigureControllers();
+builder.Services.ConfigureDbContext(builder.Configuration);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
