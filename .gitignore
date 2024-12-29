@@ -408,6 +408,10 @@ FodyWeavers.xsd
 ## Visual studio for Mac
 ##
 
+# Ignore macOS system files
+.DS_Store
+__MACOSX/
+
 
 # globs
 Makefile.in
