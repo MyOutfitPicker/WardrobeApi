@@ -5,9 +5,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="../../WardrobeApi.Data/WardrobeApi.Data/WardrobeApi.Data.csproj" />
-  </ItemGroup>
-
 </Project>
