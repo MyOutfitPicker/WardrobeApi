@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------
-// <copyright file="Item.cs" company="MyWardrobe">
+// <copyright file="ClothingItem.cs" company="MyWardrobe">
 //     Copyright (c) MyWardrobe. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
@@ -18,7 +18,7 @@ namespace MyWardrobeApi.Models
     /// <summary>
     /// Represents a single clothing or accessory item in the wardrobe.
     /// </summary>
-    public class Item
+    public class ClothingItem
     {
         /// <summary>
         /// Gets or sets the unique identifier for this item.

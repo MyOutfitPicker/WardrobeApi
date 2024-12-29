@@ -37,6 +37,6 @@ namespace MyWardrobeApi.Models
         /// <summary>
         /// Gets or sets the collection of items created by this user.
         /// </summary>
-        public ICollection<Item> Items { get; set; } = new List<Item>();
+        public ICollection<ClothingItem> ClothingItems { get; set; } = new List<ClothingItem>();
     }
 }

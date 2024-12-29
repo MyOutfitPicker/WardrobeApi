@@ -8,6 +8,7 @@
 //     Represents the database context for the Wardrobe database.
 // </summary>
 // -----------------------------------------------------------------------
+
 namespace MyWardrobeApi.Data
 {
     using Microsoft.EntityFrameworkCore;
@@ -25,7 +26,7 @@ namespace MyWardrobeApi.Data
         /// <summary>
         /// Gets or sets the <see cref="DbSet{TEntity}"/> of items in the wardrobe.
         /// </summary>
-        public DbSet<Item> Items { get; set; } = default!;
+        public DbSet<ClothingItem> ClothingItems { get; set; } = default!;
 
         /// <summary>
         /// Gets or sets the <see cref="DbSet{TEntity}"/> of outfits in the wardrobe.
@@ -42,7 +43,7 @@ namespace MyWardrobeApi.Data
 
             // Configure the many-to-many relationship between Outfit and Item
             modelBuilder.Entity<OutfitItem>()
-                .HasKey(oi => new { oi.OutfitId, oi.ItemId });
+                .HasKey(oi => new { oi.OutfitId, oi.ClothingItemId });
 
             modelBuilder.Entity<OutfitItem>()
                 .HasOne(oi => oi.Outfit)
@@ -50,9 +51,9 @@ namespace MyWardrobeApi.Data
                 .HasForeignKey(oi => oi.OutfitId);
 
             modelBuilder.Entity<OutfitItem>()
-                .HasOne(oi => oi.Item)
+                .HasOne(oi => oi.ClothingItem)
                 .WithMany(i => i.OutfitItems)
-                .HasForeignKey(oi => oi.ItemId);
+                .HasForeignKey(oi => oi.ClothingItemId);
         }
     }
 }

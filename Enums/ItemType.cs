@@ -8,6 +8,7 @@
 //     Represents the clothing item type of the clothing item.
 // </summary>
 // -----------------------------------------------------------------------
+
 namespace MyWardrobeApi.Enums
 {
     /// <summary>

@@ -7,6 +7,7 @@
 // <summary>
 //      This file contains extension methods for configuring services in the application, such as the database context and controllers.
 // </summary>
+
 namespace MyWardrobeApi.Extensions
 {
     using System;
@@ -14,6 +15,8 @@ namespace MyWardrobeApi.Extensions
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using MyWardrobeApi.Data;
+    using MyWardrobeApi.ServiceInterfaces;
+    using MyWardrobeApi.Services;
 
     /// <summary>
     /// Provides extension methods for configuring services in the application.
@@ -49,6 +52,18 @@ namespace MyWardrobeApi.Extensions
                 {
                     options.SuppressModelStateInvalidFilter = true;
                 });
+
+            return services;
+        }
+
+        /// <summary>
+        /// Configures the application's services.
+        /// </summary>
+        /// <param name="services">The service collection to which services will be added.</param>
+        /// <returns>The updated service collection.</returns>
+        public static IServiceCollection ConfigureServices(this IServiceCollection services)
+        {
+            services.AddScoped<IClothingItemService, ClothingItemService>();
 
             return services;
         }

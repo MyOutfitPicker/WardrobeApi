@@ -8,6 +8,7 @@
 //     Represents global application errors.
 // </summary>
 // -----------------------------------------------------------------------
+
 namespace MyWardrobeApi.Controllers
 {
     using Microsoft.AspNetCore.Mvc;

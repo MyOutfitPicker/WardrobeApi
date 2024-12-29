@@ -8,6 +8,7 @@
 //     Defines the OutfitItem entity, representing the many-to-many relationship
 //     between Outfits and Items in the MyWardrobe application.
 // </summary>
+
 namespace MyWardrobeApi.Models
 {
     using System.ComponentModel.DataAnnotations;
@@ -44,9 +45,9 @@ namespace MyWardrobeApi.Models
         /// <value>
         /// A string representing the primary key of the associated item in the <see cref="Item"/> table.
         /// </value>
-        [ForeignKey("Item")]
+        [ForeignKey("ClothingItem")]
         [Required]
-        public int ItemId { get; set; } = default!;
+        public int ClothingItemId { get; set; } = default!;
 
         /// <summary>
         /// Gets or sets the <see cref="Item"/> object linked to this record.
@@ -54,6 +55,6 @@ namespace MyWardrobeApi.Models
         /// <value>
         /// A navigation property to the <see cref="Item"/> entity that this association refers to.
         /// </value>
-        public Item Item { get; set; } = default!;
+        public ClothingItem ClothingItem { get; set; } = default!;
     }
 }

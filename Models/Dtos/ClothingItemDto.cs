@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------
-// <copyright file="ItemDto.cs" company="MyWardrobe">
+// <copyright file="ClothingItemDto.cs" company="MyWardrobe">
 //     Copyright (c) MyWardrobe. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
@@ -17,7 +17,7 @@ namespace MyWardrobeApi.Models.Dtos
     /// <summary>
     /// Represents a single clothing or accessory item data transfer object in the wardrobe.
     /// </summary>
-    public class ItemDto
+    public class ClothingItemDto
     {
         /// <summary>
         /// Gets or sets the display name of the item (e.g., "Nike Air Max Sneakers").
