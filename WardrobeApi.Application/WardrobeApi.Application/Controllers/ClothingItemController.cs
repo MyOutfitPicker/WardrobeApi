@@ -8,6 +8,7 @@
 //     Represents the entry point to the clothing item endpoint.
 // </summary>
 // -----------------------------------------------------------------------
+
 namespace WardrobeApi.Application.Controllers
 {
     using System.Threading.Tasks;
