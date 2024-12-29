@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
-// <copyright file="WardrobeContext.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="WardrobeContext.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -9,10 +9,10 @@
 // </summary>
 // -----------------------------------------------------------------------
 
-namespace MyWardrobeApi.Data
+namespace WardrobeApi.Data
 {
     using Microsoft.EntityFrameworkCore;
-    using MyWardrobeApi.Models;
+    using WardrobeApi.Data.Models;
 
     /// <summary>
     /// Represents the database context for the Wardrobe application.

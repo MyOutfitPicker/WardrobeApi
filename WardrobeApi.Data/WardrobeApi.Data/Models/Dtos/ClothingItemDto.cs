@@ -1,18 +1,18 @@
 // -----------------------------------------------------------------------
-// <copyright file="ClothingItemDto.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="ClothingItemDto.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
 // <summary>
 //     Defines the ItemDto, which represents a single clothing or accessory item
-//     within the MyWardrobe application.
+//     within the WardrobeApi application.
 // </summary>
 
-namespace MyWardrobeApi.Models.Dtos
+namespace WardrobeApi.Data.Models.Dtos
 {
     using System.ComponentModel.DataAnnotations;
-    using MyWardrobeApi.Enums;
+    using WardrobeApi.Shared.Enums;
 
     /// <summary>
     /// Represents a single clothing or accessory item data transfer object in the wardrobe.

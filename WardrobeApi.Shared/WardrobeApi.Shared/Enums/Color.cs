@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
-// <copyright file="Color.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="Color.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -9,7 +9,7 @@
 // </summary>
 // -----------------------------------------------------------------------
 
-namespace MyWardrobeApi.Enums
+namespace WardrobeApi.Shared.Enums
 {
     /// <summary>
     /// Represents the color of the clothing item.

@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
-// <copyright file="OutfitController.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="OutfitController.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -9,10 +9,10 @@
 // </summary>
 // -----------------------------------------------------------------------
 
-namespace MyWardrobeApi.Controllers
+namespace WardrobeApi.Application.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using MyWardrobeApi.Data;
+    using WardrobeApi.Data;
 
     /// <summary>
     /// Controller for managing outfit-related operations.

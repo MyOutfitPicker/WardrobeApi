@@ -1,21 +1,21 @@
 // -----------------------------------------------------------------------
-// <copyright file="ApplicationUser.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="ApplicationUser.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
 // <summary>
-//     Defines the ApplicationUser entity, extending IdentityUser for authentication within the MyWardrobe application.
+//     Defines the ApplicationUser entity, extending IdentityUser for authentication within the WardrobeApi application.
 // </summary>
 
-namespace MyWardrobeApi.Models
+namespace WardrobeApi.Data.Models
 {
     using System;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Identity;
 
     /// <summary>
-    /// Represents a user in the MyWardrobe application, extending IdentityUser for authentication and authorization.
+    /// Represents a user in the WardrobeApi application, extending IdentityUser for authentication and authorization.
     /// </summary>
     public class ApplicationUser : IdentityUser<int>
     {

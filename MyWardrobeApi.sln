@@ -7,6 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WardrobeApi.Application", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WardrobeApi.Application", "WardrobeApi.Application\WardrobeApi.Application\WardrobeApi.Application.csproj", "{4327D979-B05A-4519-8B20-FBBDC0B70A1B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WardrobeApi.Data", "WardrobeApi.Data", "{6B85C5B4-D64D-4575-B6F1-CFEAE8BC477B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WardrobeApi.Data", "WardrobeApi.Data\WardrobeApi.Data\WardrobeApi.Data.csproj", "{22E9E534-584B-4254-8B14-B1CF32837132}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WardrobeApi.Shared", "WardrobeApi.Shared", "{65C5BD8D-534F-4BAE-A9E3-8615DD5BD846}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WardrobeApi.Shared", "WardrobeApi.Shared\WardrobeApi.Shared\WardrobeApi.Shared.csproj", "{74C32444-29BF-400D-AD16-0759471E33C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +25,22 @@ Global
 		{4327D979-B05A-4519-8B20-FBBDC0B70A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4327D979-B05A-4519-8B20-FBBDC0B70A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4327D979-B05A-4519-8B20-FBBDC0B70A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E9E534-584B-4254-8B14-B1CF32837132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E9E534-584B-4254-8B14-B1CF32837132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E9E534-584B-4254-8B14-B1CF32837132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E9E534-584B-4254-8B14-B1CF32837132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C32444-29BF-400D-AD16-0759471E33C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C32444-29BF-400D-AD16-0759471E33C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C32444-29BF-400D-AD16-0759471E33C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C32444-29BF-400D-AD16-0759471E33C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4327D979-B05A-4519-8B20-FBBDC0B70A1B} = {63970DA1-1744-468E-B65E-CD1D92504EA2}
+		{22E9E534-584B-4254-8B14-B1CF32837132} = {6B85C5B4-D64D-4575-B6F1-CFEAE8BC477B}
+		{74C32444-29BF-400D-AD16-0759471E33C9} = {65C5BD8D-534F-4BAE-A9E3-8615DD5BD846}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {897AF967-CAA5-4AEF-8C20-8E66610784FA}

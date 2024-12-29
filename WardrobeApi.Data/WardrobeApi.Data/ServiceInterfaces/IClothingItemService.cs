@@ -1,16 +1,16 @@
 // -----------------------------------------------------------------------
-// <copyright file="IClothingItemService.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="IClothingItemService.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
 // <summary>
-//     Defines the contract for the clothing item service within the MyWardrobe application.
+//     Defines the contract for the clothing item service within the WardrobeApi application.
 // </summary>
 
-namespace MyWardrobeApi.ServiceInterfaces
+namespace WardrobeApi.Data.ServiceInterfaces
 {
-    using MyWardrobeApi.Models;
+    using WardrobeApi.Data.Models;
 
     /// <summary>
     /// Represents the contract fo the clothing item service.

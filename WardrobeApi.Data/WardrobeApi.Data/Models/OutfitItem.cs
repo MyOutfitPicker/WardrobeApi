@@ -1,15 +1,15 @@
 // -----------------------------------------------------------------------
-// <copyright file="OutfitItem.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="OutfitItem.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
 // <summary>
 //     Defines the OutfitItem entity, representing the many-to-many relationship
-//     between Outfits and Items in the MyWardrobe application.
+//     between Outfits and Items in the WardrobeApi application.
 // </summary>
 
-namespace MyWardrobeApi.Models
+namespace WardrobeApi.Data.Models
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;

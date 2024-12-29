@@ -1,19 +1,19 @@
 // -----------------------------------------------------------------------
-// <copyright file="ClothingItem.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="ClothingItem.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
 // <summary>
 //     Defines the Item entity, which represents a single clothing or accessory item
-//     within the MyWardrobe application.
+//     within the WardrobeApi application.
 // </summary>
 
-namespace MyWardrobeApi.Models
+namespace WardrobeApi.Data.Models
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using MyWardrobeApi.Enums;
+    using WardrobeApi.Shared.Enums;
 
     /// <summary>
     /// Represents a single clothing or accessory item in the wardrobe.

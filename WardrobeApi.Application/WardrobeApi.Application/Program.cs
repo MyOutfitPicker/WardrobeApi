@@ -1,4 +1,4 @@
-using MyWardrobeApi.Extensions;
+using WardrobeApi.Application.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

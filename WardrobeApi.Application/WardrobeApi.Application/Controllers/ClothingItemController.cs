@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
-// <copyright file="ClothingItemController.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="ClothingItemController.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -8,12 +8,12 @@
 //     Represents the entry point to the clothing item endpoint.
 // </summary>
 // -----------------------------------------------------------------------
-namespace MyWardrobeApi.Controllers
+namespace WardrobeApi.Application.Controllers
 {
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
-    using MyWardrobeApi.Models;
-    using MyWardrobeApi.ServiceInterfaces;
+    using WardrobeApi.Data.Models;
+    using WardrobeApi.Data.ServiceInterfaces;
 
     /// <summary>
     /// Controller for managing item-related operations.

@@ -1,19 +1,19 @@
 // -----------------------------------------------------------------------
-// <copyright file="ClothingItemService.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="ClothingItemService.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
 // <summary>
-//     Defines the contract for the clothing item service within the MyWardrobe application.
+//     Defines the contract for the clothing item service within the WardrobeApi application.
 // </summary>
 
-namespace MyWardrobeApi.Services
+namespace WardrobeApi.Data.Services
 {
     using Microsoft.EntityFrameworkCore;
-    using MyWardrobeApi.Data;
-    using MyWardrobeApi.Models;
-    using MyWardrobeApi.ServiceInterfaces;
+    using WardrobeApi.Data;
+    using WardrobeApi.Data.Models;
+    using WardrobeApi.Data.ServiceInterfaces;
 
     /// <summary>
     /// Represents the business logic layer for clothing items.

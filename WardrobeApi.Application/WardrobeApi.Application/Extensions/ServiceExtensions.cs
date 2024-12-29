@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
-// <copyright file="ServiceExtensions.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="ServiceExtensions.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -8,15 +8,15 @@
 //      This file contains extension methods for configuring services in the application, such as the database context and controllers.
 // </summary>
 
-namespace MyWardrobeApi.Extensions
+namespace WardrobeApi.Application.Extensions
 {
     using System;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using MyWardrobeApi.Data;
-    using MyWardrobeApi.ServiceInterfaces;
-    using MyWardrobeApi.Services;
+    using WardrobeApi.Data;
+    using WardrobeApi.Data.ServiceInterfaces;
+    using WardrobeApi.Data.Services;
 
     /// <summary>
     /// Provides extension methods for configuring services in the application.

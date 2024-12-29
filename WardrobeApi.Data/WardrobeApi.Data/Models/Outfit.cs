@@ -1,15 +1,15 @@
 // -----------------------------------------------------------------------
-// <copyright file="Outfit.cs" company="MyWardrobe">
-//     Copyright (c) MyWardrobe. All rights reserved.
+// <copyright file="Outfit.cs" company="WardrobeApi">
+//     Copyright (c) WardrobeApi. All rights reserved.
 //     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
 // </copyright>
 // -----------------------------------------------------------------------
 // <summary>
 //     Defines the Outfit entity, representing a collection of items
-//     under the MyWardrobe application.
+//     under the WardrobeApi application.
 // </summary>
 
-namespace MyWardrobeApi.Models
+namespace WardrobeApi.Data.Models
 {
     using System;
     using System.Collections.Generic;
