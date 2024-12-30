@@ -20,14 +20,14 @@ namespace WardrobeApi.Data.Models
     public class ApplicationUser : IdentityUser<int>
     {
         /// <summary>
-        /// Gets or sets the date and time (in UTC) when this user was created.
+        /// Gets the date and time (in UTC) when this user was created.
         /// </summary>
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
 
         /// <summary>
-        /// Gets or sets the date and time (in UTC) when this user was last updated.
+        /// Gets the date and time (in UTC) when this user was last updated.
         /// </summary>
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; private set; } = DateTime.UtcNow;
 
         /// <summary>
         /// Gets or sets the collection of outfits created by this user.

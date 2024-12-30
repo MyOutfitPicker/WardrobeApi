@@ -10,9 +10,8 @@
 
 namespace WardrobeApi.Data.Services
 {
-    using Microsoft.EntityFrameworkCore;
-    using WardrobeApi.Data;
     using WardrobeApi.Data.Models;
+    using WardrobeApi.Data.RepositoryInterfaces;
     using WardrobeApi.Data.ServiceInterfaces;
 
     /// <summary>
@@ -21,29 +20,29 @@ namespace WardrobeApi.Data.Services
     public class ClothingItemService : IClothingItemService
     {
         /// <summary>
-        /// The Wardrobe database context that acts as a bridge between the application and the database.
+        /// The instance of the item repository class.
         /// </summary>
-        private readonly WardrobeContext _context;
+        private readonly IClothingItemRepository _clothingItemRepository;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ClothingItemService"/> class.
         /// </summary>
-        /// <param name="context">The database context.</param>
-        public ClothingItemService(WardrobeContext context)
+        /// <param name="clothingItemRepository">The clothing item repository.</param>
+        public ClothingItemService(IClothingItemRepository clothingItemRepository)
         {
-            this._context = context;
+            this._clothingItemRepository = clothingItemRepository;
         }
 
         /// <inheritdoc />
         public async Task<IEnumerable<ClothingItem>> Get()
         {
-            return await this._context.ClothingItems.ToListAsync();
+            return await this._clothingItemRepository.Get();
         }
 
         /// <inheritdoc />
         public async Task<ClothingItem?> GetById(int id)
         {
-            return await this._context.ClothingItems.FindAsync(id) ?? null;
+            return await this._clothingItemRepository.GetById(id);
         }
     }
 }
