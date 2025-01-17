@@ -12,12 +12,11 @@ namespace WardrobeApi.Data.Models
 {
     using System;
     using System.Collections.Generic;
-    using Microsoft.AspNetCore.Identity;
 
     /// <summary>
     /// Represents a user in the WardrobeApi application, extending IdentityUser for authentication and authorization.
     /// </summary>
-    public class ApplicationUser : IdentityUser<int>
+    public class ApplicationUser
     {
         /// <summary>
         /// Gets the date and time (in UTC) when this user was created.

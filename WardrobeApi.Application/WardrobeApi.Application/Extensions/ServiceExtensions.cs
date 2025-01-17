@@ -15,8 +15,7 @@ namespace WardrobeApi.Application.Extensions
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using WardrobeApi.Data;
-    using WardrobeApi.Data.ServiceInterfaces;
-    using WardrobeApi.Data.Services;
+    using WardrobeApi.Data.RepositoryInterfaces;
 
     /// <summary>
     /// Provides extension methods for configuring services in the application.
@@ -63,7 +62,7 @@ namespace WardrobeApi.Application.Extensions
         /// <returns>The updated service collection.</returns>
         public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
-            services.AddScoped<IClothingItemService, ClothingItemService>();
+            services.AddScoped<IClothingItemRepository, ClothingItemRepository>();
 
             return services;
         }
