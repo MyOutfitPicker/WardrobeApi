@@ -14,7 +14,7 @@ namespace WardrobeApi.Application.Controllers
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using WardrobeApi.Data.Models;
-    using WardrobeApi.Data.ServiceInterfaces;
+    using WardrobeApi.Data.RepositoryInterfaces;
 
     /// <summary>
     /// Controller for managing item-related operations.
@@ -24,17 +24,17 @@ namespace WardrobeApi.Application.Controllers
     public class ClothingItemController : ControllerBase
     {
         /// <summary>
-        /// The clothing item service used for the business layer.
+        /// The clothing item repository used for the business layer.
         /// </summary>
-        private readonly IClothingItemService _clothingItemService;
+        private readonly IClothingItemRepository _clothingItemRepository;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ClothingItemController"/> class.
         /// </summary>
-        /// <param name="clothingItemService">The business layer object for the clothing item.</param>
-        public ClothingItemController(IClothingItemService clothingItemService)
+        /// <param name="clothingItemRepository">The data layer object for the clothing item.</param>
+        public ClothingItemController(IClothingItemRepository clothingItemRepository)
         {
-            this._clothingItemService = clothingItemService;
+            this._clothingItemRepository = clothingItemRepository;
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace WardrobeApi.Application.Controllers
         public async Task<ActionResult<IEnumerable<ClothingItem>>> Get()
         {
             // TODO: This endpoint should be refactored to GetAllByUserId after authentication has been implemented.
-            var clothingItems = await this._clothingItemService.Get();
+            var clothingItems = await this._clothingItemRepository.Get();
 
             if (!clothingItems.Any())
             {
@@ -74,7 +74,7 @@ namespace WardrobeApi.Application.Controllers
         public async Task<ActionResult<ClothingItem>> GetById(int id)
         {
             // Retrieve the item from the database
-            var item = await this._clothingItemService.GetById(id);
+            var item = await this._clothingItemRepository.GetById(id);
 
             if (item is null)
             {
