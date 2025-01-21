@@ -65,20 +65,6 @@ namespace WardrobeApi.Data.Models
         public string? Size { get; set; }
 
         /// <summary>
-        /// Gets or sets the <see cref="User"/> object that created this outfit.
-        /// </summary>
-        /// <value>A navigation property to the user who owns or created the outfit.</value>
-        public ApplicationUser CreatedByUser { get; set; } = default!;
-
-        /// <summary>
-        /// Gets or sets the ID of the user who created this item.
-        /// </summary>
-        /// <value>An integer representing the user's primary key (e.g., in the Users table).</value>
-        [ForeignKey("ApplicationUser")]
-        [Required]
-        public int CreatedBy { get; set; }
-
-        /// <summary>
         /// Gets or sets the date and time (in UTC) when this item was created.
         /// </summary>
         /// <value>A <see cref="DateTime"/> indicating when the record was created.</value>

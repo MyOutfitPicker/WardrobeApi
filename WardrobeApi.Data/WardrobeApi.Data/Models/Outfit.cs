@@ -38,20 +38,6 @@ namespace WardrobeApi.Data.Models
         public string Name { get; set; } = default!;
 
         /// <summary>
-        /// Gets or sets the ID of the user who created this outfit.
-        /// </summary>
-        /// <value>An integer referencing the user entity in the database.</value>
-        [ForeignKey("ApplicationUser")]
-        [Required]
-        public int CreatedBy { get; set; }
-
-        /// <summary>
-        /// Gets or sets the <see cref="User"/> object that created this outfit.
-        /// </summary>
-        /// <value>A navigation property to the user who owns or created the outfit.</value>
-        public ApplicationUser CreatedByUser { get; set; } = default!;
-
-        /// <summary>
         /// Gets or sets a value indicating whether the outfit is publicly visible.
         /// </summary>
         /// <value>
