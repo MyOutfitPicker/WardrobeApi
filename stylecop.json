@@ -1,0 +1,14 @@
+{
+    "settings": {
+        "documentationRules": {
+            "companyName": "",
+            "copyrightText": "",
+            "documentInterfaces": false,
+            "documentInternalElements": false,
+            "documentExposedElements": false,
+            "documentPrivateElements": false,
+            "documentPrivateFields": false,
+            "xmlHeader": false
+        }
+    }
+}

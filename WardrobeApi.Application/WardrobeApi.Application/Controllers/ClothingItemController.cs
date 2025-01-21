@@ -1,14 +1,3 @@
-// -----------------------------------------------------------------------
-// <copyright file="ClothingItemController.cs" company="WardrobeApi">
-//     Copyright (c) WardrobeApi. All rights reserved.
-//     Licensed under the MIT License (MIT). See LICENSE file in the project root for full license information.
-// </copyright>
-// -----------------------------------------------------------------------
-// <summary>
-//     Represents the entry point to the clothing item endpoint.
-// </summary>
-// -----------------------------------------------------------------------
-
 namespace WardrobeApi.Application.Controllers
 {
     using System.Threading.Tasks;
@@ -16,33 +5,17 @@ namespace WardrobeApi.Application.Controllers
     using WardrobeApi.Data.Models;
     using WardrobeApi.Data.RepositoryInterfaces;
 
-    /// <summary>
-    /// Controller for managing item-related operations.
-    /// </summary>
     [Route("api/v1/clothing-items")]
     [ApiController]
     public class ClothingItemController : ControllerBase
     {
-        /// <summary>
-        /// The clothing item repository used for the business layer.
-        /// </summary>
         private readonly IClothingItemRepository _clothingItemRepository;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ClothingItemController"/> class.
-        /// </summary>
-        /// <param name="clothingItemRepository">The data layer object for the clothing item.</param>
         public ClothingItemController(IClothingItemRepository clothingItemRepository)
         {
             this._clothingItemRepository = clothingItemRepository;
         }
 
-        /// <summary>
-        /// Retrieves all items.
-        /// </summary>
-        /// <returns>The item collection if found and has items; otherwise, a 204 as no content.</returns>
-        /// <response code="200">Returns the requested item list.</response>
-        /// <response code="204">Returns the requested item list with no content.</response>
         [HttpGet]
         [Produces("application/json")]
         [ProducesResponseType(typeof(IEnumerable<ClothingItem>), StatusCodes.Status200OK)]
@@ -60,13 +33,6 @@ namespace WardrobeApi.Application.Controllers
             return this.Ok(clothingItems);
         }
 
-        /// <summary>
-        /// Retrieves an item by its ID.
-        /// </summary>
-        /// <param name="id">The unique identifier of the item.</param>
-        /// <returns>The item if found; otherwise, a 404 error.</returns>
-        /// <response code="200">Returns the requested item.</response>
-        /// <response code="404">If the item is not found.</response>
         [HttpGet("{id}")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(ClothingItem), StatusCodes.Status200OK)]
