@@ -21,8 +21,16 @@ namespace WardrobeApi.Data
     /// Initializes a new instance of the <see cref="WardrobeContext"/> class.
     /// </remarks>
     /// <param name="options">The options to configure the database context.</param>
-    public class WardrobeContext(DbContextOptions<WardrobeContext> options) : DbContext(options)
+    public class WardrobeContext : DbContext
     {
+        private readonly DbContextOptions<WardrobeContext> _dbContextOptions;
+
+        public WardrobeContext(DbContextOptions<WardrobeContext> dbContextOptions)
+            : base(dbContextOptions)
+        {
+            this._dbContextOptions = dbContextOptions;
+        }
+
         /// <summary>
         /// Gets or sets the <see cref="DbSet{TEntity}"/> of items in the wardrobe.
         /// </summary>
