@@ -1,0 +1,39 @@
+﻿# Enforce field names to start with an underscore
+[*.cs]
+dotnet_naming_rule.field_names_should_begin_with_underscore.severity = suggestion
+dotnet_naming_rule.field_names_should_begin_with_underscore.symbols = field
+dotnet_naming_rule.field_names_should_begin_with_underscore.style = underscore_style
+
+dotnet_naming_symbols.field.definition = field
+dotnet_naming_symbols.field.applicable_kinds = field
+
+dotnet_naming_style.underscore_style.capitalization = camel_case
+dotnet_naming_style.underscore_style.required_prefix = _
+
+# Local variables should NOT begin with an underscore
+dotnet_naming_rule.local_variables_should_not_begin_with_underscore.severity = warning
+dotnet_naming_rule.local_variables_should_not_begin_with_underscore.symbols = local
+dotnet_naming_rule.local_variables_should_not_begin_with_underscore.style = no_underscore_style
+
+dotnet_naming_symbols.local.definition = local
+dotnet_naming_symbols.local.applicable_kinds = local
+
+dotnet_naming_style.no_underscore_style.capitalization = camel_case
+dotnet_naming_style.no_underscore_style.required_prefix = 
+
+# Properties should follow PascalCase
+dotnet_naming_rule.properties_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.properties_should_be_pascal_case.symbols = property
+dotnet_naming_rule.properties_should_be_pascal_case.style = pascal_case_style
+
+dotnet_naming_symbols.property.definition = property
+dotnet_naming_symbols.property.applicable_kinds = property
+
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+dotnet_naming_style.pascal_case_style.required_prefix = 
+
+# SA1309: Field names should not begin with underscore
+dotnet_diagnostic.SA1309.severity = none
+
+# IDE0290: Use primary constructor
+dotnet_diagnostic.IDE0290.severity = none
