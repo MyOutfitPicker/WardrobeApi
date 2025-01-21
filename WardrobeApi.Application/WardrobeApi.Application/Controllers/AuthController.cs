@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
-
 namespace WardrobeApi.Application.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     [ApiController]
     [Route("api/v1/auth")]
     public class AuthController : ControllerBase
@@ -13,7 +13,8 @@ namespace WardrobeApi.Application.Controllers
             this._config = config;
         }
 
-        [HttpGet("google-sign-in")]
+        [HttpGet("sign-in")]
+        [ProducesResponseType(StatusCodes.Status302Found)]
         public IActionResult GoogleSignIn()
         {
             var clientId = this._config["Google:ClientId"];
@@ -27,6 +28,20 @@ namespace WardrobeApi.Application.Controllers
             $"scope={Uri.EscapeDataString(scope)}&";
 
             return this.Redirect(authorizationUrl);
+        }
+
+        [HttpGet("authorize")]
+        [ProducesResponseType(StatusCodes.Status302Found)]
+        public IActionResult Authorize([System.Web.Http.FromUri] string authorizationCode)
+        {
+            if (authorizationCode is null)
+            {
+                return this.BadRequest("Authorization code not found.");
+            }
+
+            Console.WriteLine(authorizationCode);
+
+            return this.Redirect("/swagger");
         }
     }
 }
